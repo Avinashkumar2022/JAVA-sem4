@@ -1,0 +1,18 @@
+//Take an integer input and give the absolute value of the input as the ouput regardless of what the sign of the input was.
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc= new Scanner(System.in);
+        int input1= sc.nextInt();
+        int positive_num=Math.abs(input1);
+        System.out.println(positive_num);
+    }
+}
