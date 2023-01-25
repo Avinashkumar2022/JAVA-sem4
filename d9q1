@@ -1,0 +1,17 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */ 
+        Scanner sc=new Scanner(System.in);
+        float P=sc.nextFloat();
+        float R=sc.nextFloat();
+        double price=Math.floor(P);
+        double gst=(price*R)/100;
+        double total=P+gst;
+        int f_price=(int)Math.floor(total);
+        System.out.print(f_price);
+    }
+}
