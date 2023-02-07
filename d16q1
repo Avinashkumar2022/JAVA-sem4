@@ -1,0 +1,33 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner s = new Scanner(System.in);
+        
+        int t=s.nextInt();
+        if(t>0 && t<=5){
+        
+        while(t!=0){
+            int sum =0;
+            int a[]= new int[7];
+            for(int i=0;i<7;i++){
+                a[i]=s.nextInt();
+                sum =sum +a[i];
+            }
+            if(sum == 56){
+                System.out.println("1");
+            }
+            else{
+                System.out.println("0");
+            }
+            t--;
+        }
+        
+    }}
+}
