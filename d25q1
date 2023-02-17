@@ -1,0 +1,22 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+    static int fact=1;
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Solution ref=new Solution();
+        ref.factorial();
+        System.out.print(ref.fact);
+    }
+    public int factorial()
+    {
+        Scanner sc=new Scanner(System.in);
+        int num=sc.nextInt();
+        for(int i=1;i<=num;i++)
+        {
+            fact=fact*i;
+        }
+        return fact;
+    }
+}
