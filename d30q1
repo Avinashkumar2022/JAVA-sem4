@@ -1,0 +1,58 @@
+import java.util.*;
+public class Solution { 
+    static class Node{
+        String name;
+        String data;
+        char o;
+        String dat;
+        Node next = null;
+    } 
+    static void printList(Node n)
+    {
+        int a=0,p=0;
+        while (n != null) {
+            if(n.o=='A' )
+            {
+                System.out.println("A10"+ ++a);
+            }
+            else if(n.o=='P' )
+            {
+                System.out.println("P10"+ ++p);
+            }
+            n = n.next;
+        }
+   }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        int np=0,na=0,n;
+        n=sc.nextInt();
+        Node ac = new Node();
+        Node head=ac;
+        sc.nextLine();
+        for(int i=0;i<n;i++)
+        {
+            //sc.nextLine();
+            ac.name = sc.nextLine();
+            ac.o=sc.next().charAt(0);
+            sc.nextLine();
+            switch(ac.o)
+            {
+                case 'A':
+                    ac.data=sc.nextLine();
+                    ac.dat="";
+                    na++;
+                    break;
+                    
+                case 'P':
+                    ac.data="";
+                    ac.dat=sc.nextLine();
+                    np++;
+                    break;      
+            }
+            ac.next = new Node();
+            ac=ac.next;
+        }
+        printList(head);
+    }
+}
