@@ -1,0 +1,24 @@
+mport java.util.*;
+public class Complex {
+    static int a,b,c,d;
+    public static void main(String[] args) {
+       
+        Scanner sc=new Scanner(System.in);
+        String l1,l2;
+        int f=0,s=0;
+        l1=sc.nextLine();
+        l2=sc.nextLine();
+        String[] n=l1.split("\\W+");
+        a=Integer.parseInt(n[0]);
+        b=(n.length>1)?Integer.parseInt(n[1]):0;
+        n=l2.split("\\W+");
+        c=Integer.parseInt(n[0]);
+        d=(n.length>1)?Integer.parseInt(n[1]):0;
+        f=(a*c) - (b*d);
+        s=(a*d) + (b*c);
+        if(s>0)
+            System.out.println(f+"+"+s+'i');
+        else
+            System.out.println(f+"+"+s+'i');
+    }
+}
