@@ -1,0 +1,41 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+    
+    double total_Bill;
+    double goli_Share;
+    double babu_Share;
+    
+    public Solution(double total_Bill)
+    {
+        this.total_Bill=total_Bill;
+        this.goli_Share=0.25*total_Bill;
+        this.babu_Share=0.75*total_Bill;
+    }
+    
+    public double getBabu_Share() 
+    {
+        return babu_Share;
+    }
+
+    public double getGoli_Share() 
+    {
+        return goli_Share;
+    }
+    
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc=new Scanner(System.in);
+        double total_bill=sc.nextDouble();
+        if(total_bill<200 || total_bill>4000)
+        {
+            System.out.print("Invalid Input");
+            return;
+        }
+        Solution ref=new Solution(total_bill);
+        System.out.printf("%.2f ",ref.getBabu_Share());
+        System.out.printf("%.2f",ref.getGoli_Share());
+        
+    }
+}
