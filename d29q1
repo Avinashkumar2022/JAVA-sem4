@@ -1,0 +1,24 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner sc= new Scanner(System.in);
+        int num=sc.nextInt();
+        if(num<20 | num>400)
+        {
+            System.out.println("Invalid Input");
+            return;
+        }
+        Solution ref=new Solution();
+        boolean div_by_three=ref.check(num);
+        System.out.println(div_by_three ? "True":"False");
+    }
+    public boolean check(int num)
+    {
+        int rem=num%3;
+        return rem==0;
+    }
+}
